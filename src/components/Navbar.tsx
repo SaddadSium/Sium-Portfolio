@@ -6,8 +6,6 @@ import { Menu, X, Code2 } from "lucide-react";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
-  // স্ক্রল করলে ন্যাভবারের অপাসিটি এবং বর্ডার চেঞ্জ করার জন্য
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -19,7 +17,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Project", href: "/projects" },
+    { name: "Projects", href: "/projects" },
     { name: "Services", href: "/services" },
     { name: "Experience", href: "/experience" },
   ];
@@ -34,7 +32,6 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="flex justify-between items-center">
-          {/* Brand Logo with Cinematic Glow hover */}
           <Link href="/" className="group flex items-center gap-2.5">
             <div className="bg-gradient-to-tr from-slate-brand to-teal-brand p-2 rounded-xl group-hover:scale-105 group-hover:rotate-6 transition-all duration-300 shadow-md shadow-teal-brand/10">
               <Code2 className="text-abyss-brand w-4 h-4 stroke-[2.5]" />
@@ -43,8 +40,6 @@ const Navbar = () => {
               A.S.M. <span className="text-teal-brand font-medium">SIUM</span>
             </span>
           </Link>
-
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
             {navLinks.map((link) => (
               <Link
@@ -53,12 +48,9 @@ const Navbar = () => {
                 className="relative px-4 py-2 text-sm font-medium text-lightning/70 hover:text-white transition-colors group"
               >
                 {link.name}
-                {/* Premium Accent Underline Animation */}
                 <span className="absolute bottom-1 left-4 w-0 h-[1.5px] bg-gradient-to-r from-teal-brand to-transparent transition-all duration-300 group-hover:w-[70%]"></span>
               </Link>
             ))}
-
-            {/* Premium CTA Button */}
             <Link
               href="/contact"
               className="ml-6 bg-gradient-to-r from-slate-brand to-ocean-brand text-lightning border border-teal-brand/20 px-5 py-2 rounded-xl text-sm font-semibold hover:border-teal-brand/50 hover:text-white shadow-lg shadow-black/20 hover:shadow-teal-brand/5 active:scale-95 transition-all duration-300"
@@ -66,8 +58,6 @@ const Navbar = () => {
               Let's Talk
             </Link>
           </div>
-
-          {/* Mobile Menu Toggle Button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -78,8 +68,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-
-      {/* Premium Floating Mobile Menu Overlay */}
       <div
         className={`fixed inset-x-0 top-[70px] p-4 transition-all duration-300 md:hidden z-50 ${
           isOpen
