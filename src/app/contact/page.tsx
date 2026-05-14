@@ -19,15 +19,15 @@ export default function ContactPage() {
     email: "",
     phone: "",
     socialLink: "",
-    projectType: "Custom Full-Stack Build ($1200+)",
-    reference: "Google Search",
+    projectType: "",
+    reference: "",
     message: "",
   });
+
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
 
-  // আপনার গুগল অ্যাপস স্ক্রিপ্ট ওয়েব অ্যাপ ইউআরএল
   const GOOGLE_SHEET_SCRIPT_URL =
     "https://script.google.com/macros/s/AKfycbwWG-Q5Wq3F-qDxqiCBNO_KfcEAuR0zQO6PNc9DpdBkosWweJPtmmFhjEgcQEiSdBfA/exec";
 
@@ -44,14 +44,13 @@ export default function ContactPage() {
       });
 
       setStatus("success");
-      // ফর্ম ফিল্ডগুলো সাথে সাথে রিসেট হয়ে যাবে
       setFormData({
         name: "",
         email: "",
         phone: "",
         socialLink: "",
-        projectType: "Custom Full-Stack Build ($1200+)",
-        reference: "Google Search",
+        projectType: "",
+        reference: "",
         message: "",
       });
     } catch (error) {
@@ -62,12 +61,10 @@ export default function ContactPage() {
 
   return (
     <div className="bg-abyss-brand text-gray-100 min-h-screen font-sans relative pt-28 pb-24 flex flex-col justify-center">
-      {/* BACKGROUND TECH ENGINE */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#4e737605_1px,transparent_1px),linear-gradient(to_bottom,#4e737605_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[500px] bg-[radial-gradient(circle_at_top,#4e737610,transparent_50%)] pointer-events-none"></div>
 
       <div className="max-w-5xl mx-auto px-6 sm:px-8 relative z-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        {/* Left Column: Connection Info */}
         <div className="lg:col-span-5 space-y-6 text-left">
           <Link
             href="/"
@@ -77,7 +74,7 @@ export default function ContactPage() {
               size={14}
               className="group-hover:-translate-x-1 transition-transform"
             />
-            <span>cd .. // return home</span>
+            <span>Return Home</span>
           </Link>
           <div className="space-y-2">
             <div className="flex items-center gap-2 text-xs font-mono tracking-widest text-teal-brand uppercase">
@@ -95,19 +92,17 @@ export default function ContactPage() {
             <div className="flex items-center gap-3">
               <Mail size={14} className="text-teal-brand" />
               <span className="text-xs font-mono text-lightning/85">
-                your.email@example.com
+                saddadsium.official@gmail.com
               </span>
             </div>
           </div>
         </div>
 
-        {/* Right Column: Premium Form Window */}
         <div className="lg:col-span-7 bg-ocean-brand/10 border border-slate-brand/15 rounded-2xl p-6 sm:p-8 shadow-2xl backdrop-blur-md relative group">
           <form onSubmit={handleSubmit} className="space-y-5 text-left">
-            {/* Input Name */}
             <div className="space-y-2">
               <label className="text-xs font-mono uppercase tracking-wider text-lightning/40">
-                01 // Client Name
+                Client Name
               </label>
               <input
                 type="text"
@@ -116,17 +111,14 @@ export default function ContactPage() {
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
-                placeholder="Enter your name"
+                placeholder="Enter your full name"
                 className="w-full bg-abyss-brand/60 border border-slate-brand/20 focus:border-teal-brand/50 rounded-xl px-4 py-3 text-sm text-white outline-none transition-colors font-sans"
               />
             </div>
-
-            {/* Grid for Email & Phone */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {/* Input Email */}
               <div className="space-y-2">
                 <label className="text-xs font-mono uppercase tracking-wider text-lightning/40">
-                  02 // Secure Email
+                  Email
                 </label>
                 <input
                   type="email"
@@ -135,15 +127,13 @@ export default function ContactPage() {
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
-                  placeholder="name@domain.com"
+                  placeholder="name@gmail.com"
                   className="w-full bg-abyss-brand/60 border border-slate-brand/20 focus:border-teal-brand/50 rounded-xl px-4 py-3 text-sm text-white outline-none transition-colors font-sans"
                 />
               </div>
-
-              {/* Input Phone */}
               <div className="space-y-2">
                 <label className="text-xs font-mono uppercase tracking-wider text-lightning/40">
-                  03 // Phone Connection
+                  Phone Number
                 </label>
                 <input
                   type="tel"
@@ -157,11 +147,9 @@ export default function ContactPage() {
                 />
               </div>
             </div>
-
-            {/* Social Link Field */}
             <div className="space-y-2">
               <label className="text-xs font-mono uppercase tracking-wider text-lightning/40">
-                04 // Social Profile Link (LinkedIn / Insta / FB)
+                Social Profile Link (LinkedIn / Insta / FB)
               </label>
               <input
                 type="text"
@@ -169,17 +157,14 @@ export default function ContactPage() {
                 onChange={(e) =>
                   setFormData({ ...formData, socialLink: e.target.value })
                 }
-                placeholder="linkedin.com/in/username or @username"
+                placeholder="@username or social profile URL"
                 className="w-full bg-abyss-brand/60 border border-slate-brand/20 focus:border-teal-brand/50 rounded-xl px-4 py-3 text-sm text-white outline-none transition-colors font-sans"
               />
             </div>
-
-            {/* Grid for Project Architecture & Discovery Reference Dropdowns */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {/* Project Architecture Dropdown */}
               <div className="space-y-2">
                 <label className="text-xs font-mono uppercase tracking-wider text-lightning/40">
-                  05 // Project Architecture
+                  Project Architecture
                 </label>
                 <div className="relative">
                   <select
@@ -188,7 +173,11 @@ export default function ContactPage() {
                       setFormData({ ...formData, projectType: e.target.value })
                     }
                     className="w-full bg-abyss-brand/60 border border-slate-brand/20 focus:border-teal-brand/50 rounded-xl px-4 py-3 text-sm text-white outline-none transition-colors font-sans appearance-none cursor-pointer pr-10"
+                    required
                   >
+                    <option value="" className="bg-[#07121c]">
+                      Enter Your Project Type
+                    </option>
                     <option
                       value="MVP / Prototype ($500+)"
                       className="bg-[#07121c]"
@@ -219,11 +208,9 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
-
-              {/* Discovery Reference Dropdown */}
               <div className="space-y-2">
                 <label className="text-xs font-mono uppercase tracking-wider text-lightning/40">
-                  06 // Discovery Reference
+                  Reference
                 </label>
                 <div className="relative">
                   <select
@@ -232,7 +219,11 @@ export default function ContactPage() {
                       setFormData({ ...formData, reference: e.target.value })
                     }
                     className="w-full bg-abyss-brand/60 border border-slate-brand/20 focus:border-teal-brand/50 rounded-xl px-4 py-3 text-sm text-white outline-none transition-colors font-sans appearance-none cursor-pointer pr-10"
+                    required
                   >
+                    <option value="" className="bg-[#07121c]">
+                      Enter Your Discovery Reference
+                    </option>
                     <option value="Google Search" className="bg-[#07121c]">
                       Google Search Engine
                     </option>
@@ -258,11 +249,9 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
-
-            {/* Message Body */}
             <div className="space-y-2">
               <label className="text-xs font-mono uppercase tracking-wider text-lightning/40">
-                07 // Project Scope Specification
+                Project Scope Specification
               </label>
               <textarea
                 rows={4}
@@ -275,8 +264,6 @@ export default function ContactPage() {
                 className="w-full bg-abyss-brand/60 border border-slate-brand/20 focus:border-teal-brand/50 rounded-xl px-4 py-3 text-sm text-white outline-none transition-colors font-sans resize-none"
               />
             </div>
-
-            {/* Submit Button */}
             <div className="pt-2">
               <button
                 type="submit"
@@ -289,8 +276,6 @@ export default function ContactPage() {
                 <Send size={14} />
               </button>
             </div>
-
-            {/* Error Notification Block */}
             {status === "error" && (
               <div className="bg-red-500/10 border border-red-500/20 text-red-400 p-3.5 rounded-xl flex items-center gap-2.5 text-xs font-mono">
                 <AlertCircle size={16} />{" "}
@@ -303,29 +288,23 @@ export default function ContactPage() {
         </div>
       </div>
 
-      {/* ================= CYBER MODAL POP-UP (নতুন সাকসেস হ্যান্ডলার) ================= */}
       {status === "success" && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center z-50 p-4 animate-fadeIn">
           <div className="bg-[#050b11] border-2 border-teal-brand/40 max-w-md w-full rounded-2xl p-6 sm:p-8 text-center space-y-6 shadow-2xl shadow-teal-brand/10 relative overflow-hidden">
-            {/* Structural Cyber Grid lines inside pop-up */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#4e737604_1px,transparent_1px),linear-gradient(to_bottom,#4e737604_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none"></div>
-
-            {/* Floating Glow Pulse Shield */}
             <div className="mx-auto w-16 h-16 bg-teal-brand/10 border border-teal-brand/30 rounded-full flex items-center justify-center text-teal-brand shadow-lg shadow-teal-brand/5 animate-pulse">
               <ShieldCheck size={32} className="stroke-[1.5]" />
             </div>
 
             <div className="space-y-2">
               <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight font-mono">
-                Handshake Complete //
+                FORM SUBMITTED SUCCESSFULLY!
               </h2>
               <p className="text-lightning/60 text-sm leading-relaxed">
-                Your parameters and project definitions have been compiled
-                successfully and synced securely with Google Sheets.
+                Your project details have been securely transmitted. Contact
+                with you soon!
               </p>
             </div>
-
-            {/* Home Route OK Action Button */}
             <div className="pt-2">
               <button
                 onClick={() => router.push("/")}
