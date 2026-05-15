@@ -162,7 +162,7 @@ export default function ServicesPage() {
                 size={14}
                 className="group-hover:-translate-x-1 transition-transform"
               />
-              <span>cd .. // return home</span>
+              <span>Return Home</span>
             </Link>
             <h1 className="text-3xl sm:text-5xl font-bold text-white tracking-tight flex items-center gap-3">
               <Cpu className="text-teal-brand" size={28} /> Engineering Cost
