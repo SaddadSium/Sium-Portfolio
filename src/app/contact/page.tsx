@@ -7,7 +7,6 @@ import {
   Terminal,
   Mail,
   Send,
-  CheckCircle2,
   AlertCircle,
   ShieldCheck,
 } from "lucide-react";
@@ -179,22 +178,58 @@ export default function ContactPage() {
                       Enter Your Project Type
                     </option>
                     <option
-                      value="MVP / Prototype ($500+)"
+                      value="Custom Scripts & Task Automation ($150+)"
                       className="bg-[#07121c]"
                     >
-                      MVP Prototype ($500+)
+                      Custom Scripts & Automation ($150+)
                     </option>
                     <option
-                      value="Custom Full-Stack Build ($1200+)"
+                      value="Google Sheets API Backends ($300+)"
                       className="bg-[#07121c]"
                     >
-                      Custom Full-Stack ($1200+)
+                      Google Sheets API Backends ($300+)
                     </option>
                     <option
-                      value="Automation Suite ($800+)"
+                      value="Responsive Landing Pages & UI Layouts ($450+)"
                       className="bg-[#07121c]"
                     >
-                      Automation Suite ($800+)
+                      Responsive Landing Pages ($450+)
+                    </option>
+                    <option
+                      value="Secure RESTful API Architecture ($600+)"
+                      className="bg-[#07121c]"
+                    >
+                      Secure RESTful API Architecture ($600+)
+                    </option>
+                    <option
+                      value="MySQL Database Design & Normalization ($750+)"
+                      className="bg-[#07121c]"
+                    >
+                      MySQL Database Design ($750+)
+                    </option>
+                    <option
+                      value="React & Next.js Dynamic Full-Stack App ($950+)"
+                      className="bg-[#07121c]"
+                    >
+                      React & Next.js Full-Stack App ($950+)
+                    </option>
+                    <option
+                      value="E-Commerce Systems & Luxury Storefronts ($1500+)"
+                      className="bg-[#07121c]"
+                    >
+                      E-Commerce Systems ($1500+)
+                    </option>
+                    <option
+                      value="Domain, Hosting & Server Configuration ($2000+)"
+                      className="bg-[#07121c]"
+                    >
+                      Server & Domain Setup ($2000+)
+                    </option>
+                    <option
+                      value="Enterprise Full-Stack Architecture Suite ($2500+)"
+                      className="bg-[#07121c]"
+                    >
+                      Enterprise Full-Stack Suite ($2500+)
                     </option>
                   </select>
                   <div className="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-lightning/40">
@@ -298,7 +333,7 @@ export default function ContactPage() {
 
             <div className="space-y-2">
               <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight font-mono">
-                FORM SUBMITTED SUCCESSFULLY!
+                Handshake Complete //
               </h2>
               <p className="text-lightning/60 text-sm leading-relaxed">
                 Your project details have been securely transmitted. Contact
