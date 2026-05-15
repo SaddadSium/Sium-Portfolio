@@ -12,36 +12,35 @@ import {
 } from "lucide-react";
 
 export default function ExperiencePage() {
-  // প্রফেশনাল, অ্যাকাডেমিক এবং লিডারশিপ এক্সপেরিয়েন্স টাইমলাইন ডাটা
   const professionalExperience = [
     {
-      id: "EXP // 01",
+      id: "01",
       type: "work",
-      duration: "2024 - PRESENT",
+      duration: "2026 - PRESENT",
+      title: "Frontend Developer",
+      organization: "CodeAlpha",
+      desc: "Crafting immersive user interfaces with React and Next.js, optimizing performance through advanced caching strategies and Vercel edge functions. Collaborating on microservice architectures to deliver seamless, scalable web applications.",
+      highlights: [
+        "Next.js 19 App Engine Deployment",
+        "Google Sheets Live Real-Time API Hooks",
+        "State-Safeguarded E-commerce Pipeline Architectures",
+      ],
+    },
+    {
+      id: "02",
+      type: "work",
+      duration: "2025 - PRESENT",
       title: "Full-Stack Software Engineer & Web Architect",
       organization: "Freelance & Enterprise Systems Contracts",
       desc: "Architecting decentralized microservices, state-safeguarded e-commerce pipelines, and normalized relational database logic maps. Optimizing data loading speed down to sub-20ms environments through aggressive caching and Vercel edge runtime handlers.",
       highlights: [
         "Next.js 19 App Engine Deployment",
-        "Google Sheets Live Real-Time API Hooks",
+        "Node.js Serverless API Orchestration",
         "Microservice Gateway Rate-Limiting Protocols",
       ],
     },
     {
-      id: "EXP // 02",
-      type: "leadership",
-      duration: "2024 - PRESENT",
-      title: "Cadet Leadership & Command Training",
-      organization: "Bangladesh National Cadet Corps (BNCC)",
-      desc: "Undergoing rigorous operational discipline and squad command synchronization drills. Implementing structured chain-of-command matrices, tactical crisis management protocols, and strict scheduling workflows into cross-functional tech development environments.",
-      highlights: [
-        "Squad Command Synchronization Protocols",
-        "Strategic Event & Field Planning",
-        "Agile Leadership Communication Systems",
-      ],
-    },
-    {
-      id: "EXP // 03",
+      id: "03",
       type: "education",
       duration: "2022 - PRESENT",
       title: "B.Sc. in Computer Science & Engineering",
@@ -51,11 +50,50 @@ export default function ExperiencePage() {
         "Data Structures & Algorithms Parsing",
         "Subnet Routing & IPv6 Architecture Layouts",
         "Legacy C++ / OpenGL 2D Graphics Implementations",
+        "Java & C# Object-Oriented Programming Paradigms",
+      ],
+    },
+    {
+      id: "04",
+      type: "leadership",
+      duration: "2022 - 2024",
+      title: "General Member",
+      organization: "AIUB Photography Club (AIUBPC)",
+      desc: "Led strategic event planning and field operations for the AIUB Photography Club, orchestrating synchronized protocols for squad commands during on-site shoots. Developed agile communication systems to enhance team coordination and execution efficiency in dynamic environments.",
+      highlights: [
+        "Event Planning & Execution Protocols",
+        "Team Coordination & Communication Systems",
+        "On-Site Operational Leadership",
+      ],
+    },
+    {
+      id: "05",
+      type: "work",
+      duration: "2021 - 2022",
+      title: "Director of Finance & Operations",
+      organization: "Layers N Effects (LNE)",
+      desc: "Directed financial strategy and operational execution for Layers N Effects, a dynamic event management company. Spearheaded the development of comprehensive event planning protocols and led on-site operational teams to ensure seamless execution of high-profile events, enhancing client satisfaction and organizational efficiency.",
+      highlights: [
+        "Financial Strategy & Budget Management",
+        "Operational Protocol Development",
+        "On-Site Event Leadership",
+      ],
+    },
+    {
+      id: "06",
+      type: "leadership",
+      duration: "2021 - 2023",
+      title: "Advisor",
+      organization: "Photography Club of Rouf College (PCRC)",
+      desc: "Provided strategic guidance and mentorship to the Photography Club of Rouf College, advising on financial management and operational protocols. Played a key role in the development of event planning strategies and on-site leadership, contributing to the club's growth and success in organizing impactful photography events.",
+      highlights: [
+        "Advisory role in photography club operations",
+        "Technical mentorship in event planning and execution",
+        "Financial oversight and strategic guidance",
       ],
     },
   ];
 
-  // টাইপ অনুযায়ী প্রিমিয়াম রেন্ডারড আইকন জেনারেটর
   const getExperienceIcon = (type: string) => {
     switch (type) {
       case "work":
@@ -71,12 +109,10 @@ export default function ExperiencePage() {
 
   return (
     <div className="bg-abyss-brand text-gray-100 min-h-screen font-sans relative pt-28 pb-24">
-      {/* BACKGROUND TECH ENGINE (সাইবারনেটিক লাইভ নিয়ন গ্রিড ইফেক্ট) */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#4e737605_1px,transparent_1px),linear-gradient(to_bottom,#4e737605_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[500px] bg-[radial-gradient(circle_at_top,#4e737610,transparent_50%)] pointer-events-none"></div>
 
       <div className="max-w-4xl mx-auto px-6 sm:px-8 relative z-10 space-y-16">
-        {/* Top Navigation Row */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-brand/10 pb-8">
           <div className="space-y-2 text-left">
             <Link
@@ -87,29 +123,21 @@ export default function ExperiencePage() {
                 size={14}
                 className="group-hover:-translate-x-1 transition-transform"
               />
-              <span>cd .. // return home</span>
+              <span>Return Home</span>
             </Link>
             <h1 className="text-3xl sm:text-5xl font-bold text-white tracking-tight flex items-center gap-3">
               <Award className="text-teal-brand" size={28} /> Engineering
               Timeline
             </h1>
           </div>
-          <p className="text-lightning/50 max-w-sm text-sm font-normal leading-relaxed text-left sm:text-right font-mono text-xs uppercase tracking-widest">
-            LOG // RUNTIME_JOURNEY_ROOT
-          </p>
         </div>
 
-        {/* Cyber timeline container framework */}
         <div className="relative border-l-2 border-slate-brand/20 pl-6 sm:pl-10 space-y-14 text-left max-w-3xl mx-auto pt-4">
           {professionalExperience.map((exp, index) => (
             <div key={index} className="relative group space-y-4">
-              {/* Timeline Dynamic Structural Outer Dot */}
               <span className="absolute -left-[3 geometry-accent] -left-[33px] sm:-left-[51px] top-1.5 w-5 h-5 rounded-full bg-abyss-brand border-2 border-slate-brand/40 group-hover:border-teal-brand transition-all duration-300 flex items-center justify-center shadow-lg shadow-black/80 z-20">
-                {/* Inner core node ping pulse */}
                 <span className="w-1.5 h-1.5 rounded-full bg-slate-brand/40 group-hover:bg-teal-brand transition-colors duration-300"></span>
               </span>
-
-              {/* Time Badge Badge Kernel */}
               <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                 <span className="text-xs font-mono text-teal-brand font-bold bg-slate-brand/10 border border-slate-brand/20 px-3 py-1 rounded-xl w-fit shadow-md">
                   {exp.duration}
@@ -118,10 +146,7 @@ export default function ExperiencePage() {
                   // {exp.id}
                 </span>
               </div>
-
-              {/* Main Luxury Glassmorphic Text Card content container */}
               <div className="bg-ocean-brand/10 border border-slate-brand/15 rounded-2xl p-6 sm:p-8 space-y-4 hover:border-teal-brand/20 hover:bg-[#050b11]/40 transition-all duration-300 shadow-2xl relative">
-                {/* Header segment information rows */}
                 <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 pb-4 border-b border-slate-brand/10">
                   <div className="space-y-1">
                     <h2 className="text-lg sm:text-xl font-bold text-white tracking-tight group-hover:text-teal-brand transition-colors">
@@ -132,24 +157,14 @@ export default function ExperiencePage() {
                       {exp.organization}
                     </p>
                   </div>
-
-                  {/* Category Node Action Icon wrapper box */}
                   <div className="p-2.5 bg-[#050b11]/80 border border-slate-brand/20 text-teal-brand rounded-xl shadow-inner hidden sm:block">
                     {getExperienceIcon(exp.type)}
                   </div>
                 </div>
-
-                {/* Computational description bio paragraph */}
                 <p className="text-lightning/60 text-sm leading-relaxed font-normal">
                   {exp.desc}
                 </p>
-
-                {/* Sub-node tech verified highlight bullet badges */}
                 <div className="pt-2 space-y-2">
-                  <span className="text-[10px] font-mono uppercase tracking-widest text-lightning/30 block font-bold">
-                    // Verified Architectural Delivery points
-                  </span>
-
                   <div className="flex flex-wrap gap-2.5 pt-1">
                     {exp.highlights.map((highlight, i) => (
                       <div
@@ -162,8 +177,6 @@ export default function ExperiencePage() {
                     ))}
                   </div>
                 </div>
-
-                {/* Corner Decorative Accent Glow Line */}
                 <div className="absolute bottom-0 left-0 h-[1.5px] w-0 bg-gradient-to-r from-teal-brand to-transparent transition-all duration-500 group-hover:w-[50%]"></div>
               </div>
             </div>

@@ -50,14 +50,14 @@ export default function AboutPage() {
       desc: "Got first position in the national photography contest.",
       icon: <CameraIcon className="text-teal-brand" size={20} />,
     },
+    {
+      id: "03",
+      title: "IT Essentials From Cisco",
+      desc: "Completed the IT Essentials course from Cisco, gaining foundational knowledge in computer hardware, software, and networking.",
+      icon: <BookOpen className="text-teal-brand" size={20} />,
+    },
     // {
-    //   id: "02",
-    //   title: "PHP Certified from UDEMY",
-    //   desc: "Completed comprehensive PHP course on Udemy, enhancing backend web development and server-side scripting skills.",
-    //   icon: <BookOpen className="text-teal-brand" size={20} />,
-    // },
-    // {
-    //   id: "03",
+    //   id: "04",
     //   title: "MIST Hackathon Participant",
     //   desc: "Collaborated with peers to develop innovative solutions under strict technical constraints at MIST Hackathon.",
     //   icon: <ExternalLink className="text-blue-400" size={20} />,
