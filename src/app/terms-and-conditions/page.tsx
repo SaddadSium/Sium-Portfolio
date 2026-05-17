@@ -15,12 +15,10 @@ export default function TermsAndConditions() {
 
   return (
     <div className="bg-abyss-brand text-gray-100 min-h-screen font-sans relative pt-28 pb-24">
-      {/* BACKGROUND TECH ENGINE */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#4e737605_1px,transparent_1px),linear-gradient(to_bottom,#4e737605_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[500px] bg-[radial-gradient(circle_at_top,#4e737610,transparent_50%)] pointer-events-none"></div>
 
       <div className="max-w-4xl mx-auto px-6 sm:px-8 relative z-10 space-y-12 text-left">
-        {/* Header Section */}
         <div className="space-y-4 border-b border-slate-brand/10 pb-8">
           <Link
             href="/"
@@ -30,21 +28,19 @@ export default function TermsAndConditions() {
               size={14}
               className="group-hover:-translate-x-1 transition-transform"
             />
-            <span>cd .. // return home</span>
+            <span>Return Home</span>
           </Link>
           <h1 className="text-3xl sm:text-5xl font-bold text-white tracking-tight flex items-center gap-3">
             <Scale className="text-teal-brand" size={32} /> Terms & Conditions
           </h1>
           <p className="text-lightning/40 text-xs font-mono uppercase tracking-widest">
-            Last Updated: {lastUpdated} // Effective Immediately
+            Last Updated: {lastUpdated}
           </p>
         </div>
-
-        {/* Content Section */}
         <div className="space-y-10 leading-relaxed text-lightning/70">
           <section className="space-y-4">
             <div className="flex items-center gap-2 text-white font-bold text-lg">
-              <Gavel size={20} className="text-teal-brand" /> 01 // Agreement of
+              <Gavel size={20} className="text-teal-brand" /> 01. Agreement of
               Terms
             </div>
             <p className="text-sm sm:text-base">
@@ -57,8 +53,8 @@ export default function TermsAndConditions() {
 
           <section className="space-y-4">
             <div className="flex items-center gap-2 text-white font-bold text-lg">
-              <Cpu size={20} className="text-teal-brand" /> 02 // Project Scope
-              & Delivery
+              <Cpu size={20} className="text-teal-brand" /> 02. Project Scope &
+              Delivery
             </div>
             <p className="text-sm sm:text-base">
               Each project is governed by a specific Software Requirement
@@ -71,7 +67,7 @@ export default function TermsAndConditions() {
 
           <section className="space-y-4">
             <div className="flex items-center gap-2 text-white font-bold text-lg">
-              <FileCheck size={20} className="text-teal-brand" /> 03 // Payment
+              <FileCheck size={20} className="text-teal-brand" /> 03. Payment
               Terms & Tiers
             </div>
             <p className="text-sm sm:text-base">
@@ -92,7 +88,7 @@ export default function TermsAndConditions() {
 
           <section className="space-y-4">
             <div className="flex items-center gap-2 text-white font-bold text-lg">
-              <HardDrive size={20} className="text-teal-brand" /> 04 //
+              <HardDrive size={20} className="text-teal-brand" /> 04.
               Intellectual Property
             </div>
             <p className="text-sm sm:text-base">
@@ -106,7 +102,7 @@ export default function TermsAndConditions() {
 
           <section className="space-y-4">
             <div className="flex items-center gap-2 text-white font-bold text-lg">
-              <ShieldAlert size={20} className="text-teal-brand" /> 05 //
+              <ShieldAlert size={20} className="text-teal-brand" /> 05.
               Limitation of Liability
             </div>
             <p className="text-sm sm:text-base">
@@ -129,11 +125,9 @@ export default function TermsAndConditions() {
             </p>
           </section>
         </div>
-
-        {/* Footer Note */}
         <div className="pt-12 text-center">
           <p className="text-[10px] font-mono text-lightning/30 uppercase tracking-[0.2em]">
-            End of Agreement // Terminate Session
+            End of Agreement
           </p>
         </div>
       </div>
