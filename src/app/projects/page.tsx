@@ -104,7 +104,7 @@ export default function ProjectPage() {
       desc: "A complex 2D environmental structural simulation developed natively from scratch using C++ syntax rules and legacy OpenGL (GLUT) library layers.",
       tags: ["C++", "OpenGL", "GLUT", "Computer Graphics"],
       category: "University Project",
-      image: "/projects/echoes-indus.jpg",
+      image: "/projects/gr.webp",
       github: "https://github.com/SaddadSium/Echos-Indus-CMG",
       live: "https://github.com/SaddadSium/Echos-Indus-CMG",
     },
@@ -131,7 +131,7 @@ export default function ProjectPage() {
       desc: "A comprehensive wedding management system built with C#, implementing core OOP principles, file I/O for data persistence, and thread-safe operations for concurrent user access.",
       tags: ["C#", "OOP Principles", "File IO", "Thread Safe"],
       category: "University Project",
-      image: "/projects/banking-terminal.jpg",
+      image: "/projects/ay.webp",
       github: "https://github.com/SaddadSium/Ayojon-C--FinalProject",
       live: "https://github.com/SaddadSium/Ayojon-C--FinalProject",
     },
@@ -188,12 +188,10 @@ export default function ProjectPage() {
 
   return (
     <div className="bg-abyss-brand text-gray-100 min-h-screen font-sans relative pt-28 pb-24">
-      {/* BACKGROUND TECH ENGINE */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#4e737605_1px,transparent_1px),linear-gradient(to_bottom,#4e737605_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[500px] bg-[radial-gradient(circle_at_top,#4e737610,transparent_50%)] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10 space-y-12">
-        {/* Top Header Row Navigation */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-brand/10 pb-8">
           <div className="space-y-2 text-left">
             <Link
@@ -204,19 +202,14 @@ export default function ProjectPage() {
                 size={14}
                 className="group-hover:-translate-x-1 transition-transform"
               />
-              <span>cd .. // return home</span>
+              <span>Return Home</span>
             </Link>
             <h1 className="text-3xl sm:text-5xl font-bold text-white tracking-tight flex items-center gap-3">
               <Layers className="text-teal-brand" size={28} /> Project Registry
             </h1>
           </div>
-          <p className="text-lightning/50 max-w-sm text-sm font-normal leading-relaxed text-left sm:text-right font-mono text-xs">
-            INDEXED: {filteredProjects.length} / {allProjects.length} NODE
-            ARTIFACTS FILTERED // STABLE
-          </p>
         </div>
 
-        {/* High-Tech Tab Controllers */}
         <div className="flex flex-wrap gap-3 border-b border-slate-brand/5 pb-6 justify-start">
           <button
             onClick={() => setActiveTab("all")}
@@ -226,7 +219,7 @@ export default function ProjectPage() {
                 : "bg-ocean-brand/20 border-slate-brand/10 text-lightning/60 hover:text-white hover:border-slate-brand/30"
             }`}
           >
-            // All Artifacts ({allProjects.length})
+            All Artifacts ({allProjects.length})
           </button>
           <button
             onClick={() => setActiveTab("marketplace")}
@@ -260,7 +253,6 @@ export default function ProjectPage() {
           </button>
         </div>
 
-        {/* 15 Projects Production Grid System */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, i) => (
             <div
@@ -268,14 +260,12 @@ export default function ProjectPage() {
               className="bg-ocean-brand/10 border border-slate-brand/15 rounded-2xl overflow-hidden hover:border-teal-brand/30 hover:bg-[#050b11]/50 transition-all duration-300 group flex flex-col justify-between shadow-xl relative animate-fadeIn"
             >
               <div className="space-y-5">
-                {/* Image Showcase Banner with Fallback Architecture */}
                 <div className="h-44 w-full relative overflow-hidden border-b border-slate-brand/10 bg-[#060e16] flex items-center justify-center group-hover:scale-[1.01] transition-transform duration-500">
                   <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover opacity-60 group-hover:opacity-90 transition-all duration-500"
                     onError={(e) => {
-                      // যদি ইমেজ না থাকে বা লোড ফেল করে তবে এটি ব্যাকআপ সাইবার প্লেসহোল্ডার রেন্ডার করবে
                       e.currentTarget.style.display = "none";
                       if (e.currentTarget.nextSibling) {
                         (
@@ -284,8 +274,6 @@ export default function ProjectPage() {
                       }
                     }}
                   />
-
-                  {/* Backup Standby Standby Grid Element */}
                   <div className="absolute inset-0 hidden flex-col items-center justify-center space-y-2 bg-[#060e16] px-4 font-mono text-center">
                     <div className="absolute inset-0 bg-[linear-gradient(to_right,#4e737603_1px,transparent_1px),linear-gradient(to_bottom,#4e737603_1px,transparent_1px)] bg-[size:16px_16px]"></div>
                     <ImageIcon
@@ -296,8 +284,6 @@ export default function ProjectPage() {
                       IMG_REF // STATIC_NODE_SHIELD
                     </span>
                   </div>
-
-                  {/* Category Chip Badge overlay */}
                   <span
                     className={`absolute top-4 left-4 text-[9px] uppercase tracking-widest font-bold px-2.5 py-1 rounded border backdrop-blur-sm shadow-md flex items-center gap-1.5 z-20 ${
                       project.category === "Marketplace Project"
@@ -310,8 +296,6 @@ export default function ProjectPage() {
                   </span>
                   <div className="absolute inset-0 bg-gradient-to-t from-abyss-brand via-transparent to-transparent opacity-90 z-10"></div>
                 </div>
-
-                {/* Core Content Box */}
                 <div className="px-6 space-y-3.5">
                   <h2 className="text-lg font-bold text-white group-hover:text-teal-brand transition-colors tracking-tight text-left line-clamp-1">
                     {project.title}
@@ -321,8 +305,6 @@ export default function ProjectPage() {
                   </p>
                 </div>
               </div>
-
-              {/* Lower Section Technical Framework Badges & Interactive Link Buttons */}
               <div className="px-6 pb-6 space-y-5 pt-4">
                 <div className="flex flex-wrap gap-1.5 h-[52px] overflow-hidden content-start">
                   {project.tags.map((tag) => (
@@ -334,8 +316,6 @@ export default function ProjectPage() {
                     </span>
                   ))}
                 </div>
-
-                {/* Action Link Row: Code + Live Live Preview Controls */}
                 <div className="grid grid-cols-2 gap-3 pt-2 border-t border-slate-brand/5">
                   <a
                     href={project.github}
