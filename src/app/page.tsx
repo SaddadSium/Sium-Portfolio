@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { useState } from "react";
 import {
   ArrowRight,
   CheckCircle2,
@@ -19,9 +20,14 @@ import {
   ExternalLink,
   GraduationCap,
   ShoppingBag,
+  X,
+  Download,
+  Eye,
 } from "lucide-react";
 
 export default function Home() {
+  const [isPreviewOpen, setIsPreviewOpen] = useState(false);
+
   const stats = [
     {
       id: 1,
@@ -152,12 +158,13 @@ export default function Home() {
                   className="group-hover:translate-x-1 transition-transform"
                 />
               </Link>
-              <Link
-                href="https://drive.google.com/drive/u/0/folders/1G2qd3EqpcCFV-K6oCTUF5V1cTGP8hq7I"
-                className="bg-ocean-brand/40 border border-slate-brand/20 text-lightning px-8 py-4 rounded-xl font-semibold text-sm hover:bg-ocean-brand/70 hover:border-teal-brand/30 active:scale-[0.98] transition-all flex items-center justify-center"
+              <button
+                onClick={() => setIsPreviewOpen(true)}
+                className="bg-ocean-brand/40 border border-slate-brand/20 text-lightning px-8 py-4 rounded-xl font-semibold text-sm hover:bg-ocean-brand/70 hover:border-teal-brand/30 active:scale-[0.98] transition-all flex items-center justify-center gap-2"
               >
-                Compile Resume (.pdf)
-              </Link>
+                <Eye size={16} className="text-teal-brand" /> Compile Resume
+                (.pdf)
+              </button>
             </div>
           </div>
 
@@ -221,7 +228,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section className="relative max-w-7xl mx-auto px-6 sm:px-8 pb-24 z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-slate-brand/20 rounded-2xl overflow-hidden bg-gradient-to-b from-ocean-brand/20 to-transparent backdrop-blur-md shadow-2xl">
           {stats.map((stat, idx) => (
@@ -250,7 +256,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
       <section
         id="services"
         className="py-32 bg-[#050b11]/80 border-t border-slate-brand/10 relative px-6 sm:px-8 z-10"
@@ -361,7 +366,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      ]
       <section
         id="featured-projects"
         className="py-32 max-w-7xl mx-auto px-6 sm:px-8 relative z-10 border-t border-slate-brand/10"
@@ -479,6 +484,53 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {isPreviewOpen && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center z-50 p-3 sm:p-4 animate-fadeIn">
+          <div className="bg-[#050b11] border border-slate-brand/30 max-w-5xl w-full h-[85vh] rounded-2xl flex flex-col overflow-hidden shadow-2xl shadow-black/80 relative">
+            <div className="bg-ocean-brand/40 px-5 py-4 border-b border-slate-brand/20 flex justify-between items-center z-10 relative">
+              <div className="flex items-center gap-2.5 text-left">
+                <div className="p-1.5 bg-slate-brand/10 border border-slate-brand/20 text-teal-brand rounded-lg">
+                  <Terminal size={14} />
+                </div>
+                <div>
+                  <h2 className="text-sm font-bold text-white tracking-tight font-mono">
+                    Resume Preview // A.S.M. Sium
+                  </h2>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <a
+                  href="/resume.pdf"
+                  download="ASM_Sium_Resume.pdf"
+                  className="bg-teal-brand/10 border border-teal-brand/20 text-teal-brand px-3 py-1.5 rounded-xl font-bold text-xs hover:bg-teal-brand hover:text-abyss-brand transition-all flex items-center gap-1.5 font-mono"
+                >
+                  <Download size={12} /> Download CV
+                </a>
+                <button
+                  onClick={() => setIsPreviewOpen(false)}
+                  className="p-1.5 bg-red-500/10 border border-red-500/20 text-red-400 hover:bg-red-500 hover:text-white rounded-xl transition-all"
+                  title="Close Preview"
+                >
+                  <X size={14} />
+                </button>
+              </div>
+            </div>
+
+            <div className="flex-1 bg-[#121314] relative">
+              <iframe
+                src="/resume.pdf#toolbar=0&navpanes=0"
+                className="w-full h-full border-none"
+                title="A.S.M. Sium Professional Resume"
+              ></iframe>
+            </div>
+
+            <div className="bg-ocean-brand/20 border-t border-slate-brand/15 py-2 px-4 flex justify-between items-center text-[9px] font-mono text-lightning/30 uppercase tracking-widest">
+              <span>format: PDF Document</span>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
