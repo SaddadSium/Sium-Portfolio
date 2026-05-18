@@ -11,299 +11,114 @@ import {
   Layers,
   Cpu,
   Binary,
-  FileSpreadsheet,
   Globe2,
+  Image as ImageIcon,
+  Database,
+  FileJson,
+  Sparkles,
+  ExternalLink,
+  GraduationCap,
+  ShoppingBag,
 } from "lucide-react";
 
 export default function Home() {
-  // প্রজেক্ট ও এক্সপেরিয়েন্স স্ট্যাটিস্টিকস ম্যাট্রিক্স
   const stats = [
     {
       id: 1,
-      count: "25+",
+      count: "15+",
       label: "Architected Systems",
       icon: <CheckCircle2 size={18} />,
     },
     {
       id: 2,
-      count: "12+",
+      count: "7+",
       label: "Global Stakeholders",
       icon: <Users size={18} />,
     },
     {
       id: 3,
-      count: "2.5+",
+      count: "2+",
       label: "Years Programming",
       icon: <Briefcase size={18} />,
     },
   ];
 
-  // কোর কোডিং ফ্রেমওয়ার্ক এবং ল্যাঙ্গুয়েজ স্ট্যাক
   const codingSkills = [
-    { name: "Next.js / React 19", progress: "w-[92%]", level: "92%" },
-    { name: "Nest.js / Node.js", progress: "w-[88%]", level: "88%" },
-    { name: "TypeScript / JavaScript", progress: "w-[95%]", level: "95%" },
-    { name: "PHP / Laravel", progress: "w-[75%]", level: "75%" },
-    { name: "MySQL / PostgreSQL", progress: "w-[85%]", level: "85%" },
-    { name: "Tailwind CSS / UI Engine", progress: "w-[95%]", level: "95%" },
+    { name: "Next.js / React 19", progress: "w-[85%]", level: "85%" },
+    { name: "TypeScript / JavaScript", progress: "w-[90%]", level: "90%" },
+    { name: "Nest.js / Node.js", progress: "w-[80%]", level: "80%" },
+    { name: "PHP", progress: "w-[80%]", level: "80%" },
+    { name: "Java / OOP Architecture", progress: "w-[85%]", level: "85%" },
+    { name: "C#", progress: "w-[80%]", level: "80%" },
+    { name: "C++ / OpenGL Graphics", progress: "w-[88%]", level: "88%" },
+    { name: "MySQL / PostgreSQL DB", progress: "w-[85%]", level: "85%" },
+    { name: "Tailwind CSS / UI Engine", progress: "w-[92%]", level: "92%" },
   ];
 
-  // এন্টারপ্রাইজ অটোমেশন এবং ডকুমেন্টেশন টুলস (MS Office)
-  const enterpriseTools = [
+  const creativeAndDataTools = [
     {
-      name: "Microsoft Excel",
-      desc: "Data Logic & Architecture",
-      icon: <FileSpreadsheet className="text-emerald-400" size={18} />,
+      name: "Google Sheets",
+      desc: "API Endpoints & Cloud Data Sync",
+      icon: <Layers className="text-emerald-400" size={18} />,
     },
     {
-      name: "Microsoft PowerPoint",
-      desc: "Technical Presentations & Pitch",
-      icon: <Briefcase className="text-orange-400" size={18} />,
+      name: "Adobe Lightroom",
+      desc: "Color Grading & Raw Image Parsing",
+      icon: <Sparkles className="text-sky-400" size={18} />,
     },
     {
-      name: "Microsoft Word",
-      desc: "SRS Documentation & Contracts",
-      icon: <Terminal className="text-blue-400" size={18} />,
+      name: "Adobe Photoshop",
+      desc: "Digital Composition & UI Assets",
+      icon: <Code2 className="text-indigo-400" size={18} />,
     },
   ];
 
-  // রিয়েল-ওয়ার্ল্ড প্রজেক্ট ডাটা শোকেস (Unique Embedded SVGs)
+  const languageFluency = [
+    { code: "01", lang: "Bangla", fluency: "Native / Mother Tongue" },
+    { code: "02", lang: "English", fluency: "Professional Working" },
+    { code: "03", lang: "Urdu", fluency: "Conversational Fluent" },
+    { code: "04", lang: "Hindi", fluency: "Spoken Understanding" },
+  ];
+
   const featuredProjects = [
     {
       title: "REINOIR Luxury E-Commerce",
-      desc: "A high-end Next.js application built for a luxury perfume brand featuring lightning-fast state transitions and a premium UI layout.",
-      tags: ["Next.js", "TypeScript", "Tailwind CSS", "Redux"],
-      github: "#",
-      svgIcon: (
-        <svg
-          className="w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-opacity duration-500"
-          viewBox="0 0 400 200"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect width="400" height="200" fill="#07121c" />
-          <g opacity="0.12">
-            <path
-              d="M 0,20 L 400,20 M 0,60 L 400,60 M 0,100 L 400,100 M 0,140 L 400,140 M 0,180 L 400,180"
-              stroke="#4e7376"
-              strokeWidth="1"
-            />
-            <path
-              d="M 40,0 L 40,200 M 100,0 L 100,200 M 160,0 L 160,200 M 220,0 L 220,200 M 280,0 L 280,200 M 340,0 L 340,200"
-              stroke="#4e7376"
-              strokeWidth="1"
-            />
-          </g>
-          <circle
-            cx="200"
-            cy="100"
-            r="45"
-            fill="#4e7376"
-            fillOpacity="0.05"
-            stroke="#80b4b0"
-            strokeWidth="1.5"
-            strokeDasharray="4 4"
-          />
-          <path
-            d="M180 100 L195 115 L225 85"
-            stroke="#80b4b0"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <text
-            x="20"
-            y="180"
-            fill="#80b4b0"
-            fillOpacity="0.5"
-            fontSize="10"
-            fontFamily="monospace"
-            letterSpacing="1"
-          >
-            REINOIR // STACK_OK
-          </text>
-        </svg>
-      ),
+      desc: "A premium Next.js enterprise web app engineered for a high-end luxury perfume brand featuring optimized state management, global cart handlers, and seamless edge deployment.",
+      tags: ["Next.js", "TypeScript", "Tailwind CSS", "Google Sheets API"],
+      category: "Marketplace Project",
+      image: "/projects/r.webp",
+      github: "https://github.com/SaddadSium/Reinoir-Perfume-Brand",
+      live: "https://reinoir-perfume-brand.vercel.app/",
     },
     {
-      title: "Frostiva Online Food Store",
-      desc: "An innovative full-stack e-commerce engine engineered with a Google Sheets real-time backend architecture for rapid order tracking.",
-      tags: ["JavaScript", "HTML5", "Node.js", "Google Sheets API"],
-      github: "#",
-      svgIcon: (
-        <svg
-          className="w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-opacity duration-500"
-          viewBox="0 0 400 200"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect width="400" height="200" fill="#07121c" />
-          <g opacity="0.12">
-            <path
-              d="M 0,30 L 400,30 M 0,80 L 400,80 M 0,130 L 400,130 M 0,180 L 400,180"
-              stroke="#4e7376"
-              strokeWidth="1"
-            />
-            <path
-              d="M 50,0 L 50,200 M 150,0 L 150,200 M 250,0 L 250,200 M 350,0 L 350,200"
-              stroke="#4e7376"
-              strokeWidth="1"
-            />
-          </g>
-          <path
-            d="M100 100 L160 60 L240 140 L300 100"
-            stroke="#80b4b0"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-          <circle
-            cx="100"
-            cy="100"
-            r="4"
-            fill="#0a2633"
-            stroke="#80b4b0"
-            strokeWidth="2"
-          />
-          <circle
-            cx="160"
-            cy="60"
-            r="4"
-            fill="#0a2633"
-            stroke="#80b4b0"
-            strokeWidth="2"
-          />
-          <circle
-            cx="240"
-            cy="140"
-            r="4"
-            fill="#0a2633"
-            stroke="#80b4b0"
-            strokeWidth="2"
-          />
-          <circle
-            cx="300"
-            cy="100"
-            r="4"
-            fill="#0a2633"
-            stroke="#80b4b0"
-            strokeWidth="2"
-          />
-          <text
-            x="20"
-            y="180"
-            fill="#80b4b0"
-            fillOpacity="0.5"
-            fontSize="10"
-            fontFamily="monospace"
-            letterSpacing="1"
-          >
-            FROSTIVA // DATA_SYNC
-          </text>
-        </svg>
-      ),
+      title: "Frostiva Online Food Shop",
+      desc: "An innovative automated e-commerce engine using a real-time Google Sheets backend API framework for fast order computation and state synchronization.",
+      tags: ["JavaScript", "Google Sheets API", "HTML5", "CSS3"],
+      category: "Marketplace Project",
+      image: "/projects/f.webp",
+      github: "https://github.com/SaddadSium/Frostiva",
+      live: "https://saddadsium.github.io/Frostiva/",
     },
     {
-      title: "S&S Heritage Platform",
-      desc: "A high-traffic, secure restaurant operations database and user application blending computational logic with strict performance limits.",
-      tags: ["PHP", "MySQL", "JavaScript", "Bootstrap"],
-      github: "#",
-      svgIcon: (
-        <svg
-          className="w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-opacity duration-500"
-          viewBox="0 0 400 200"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect width="400" height="200" fill="#07121c" />
-          <g opacity="0.12">
-            <path
-              d="M 0,40 L 400,40 M 0,90 L 400,90 M 0,140 L 400,140"
-              stroke="#4e7376"
-              strokeWidth="1"
-            />
-            <path
-              d="M 80,0 L 80,200 M 200,0 L 200,200 M 320,0 L 320,200"
-              stroke="#4e7376"
-              strokeWidth="1"
-            />
-          </g>
-          <rect
-            x="150"
-            y="60"
-            width="100"
-            height="24"
-            rx="4"
-            fill="#0a2633"
-            stroke="#4e7376"
-            strokeWidth="1.5"
-          />
-          <rect
-            x="150"
-            y="94"
-            width="100"
-            height="24"
-            rx="4"
-            fill="#0a2633"
-            stroke="#4e7376"
-            strokeWidth="1.5"
-          />
-          <circle cx="165" cy="72" r="3" fill="#80b4b0" />
-          <circle cx="165" cy="106" r="3" fill="#80b4b0" />
-          <line
-            x1="180"
-            y1="72"
-            x2="230"
-            y2="72"
-            stroke="#4e7376"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-          <line
-            x1="180"
-            y1="106"
-            x2="220"
-            y2="106"
-            stroke="#4e7376"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-          <text
-            x="20"
-            y="180"
-            fill="#80b4b0"
-            fillOpacity="0.5"
-            fontSize="10"
-            fontFamily="monospace"
-            letterSpacing="1"
-          >
-            HERITAGE // DB_SECURE
-          </text>
-        </svg>
-      ),
+      title: "S&S Heritage Restaurant Hub",
+      desc: "A high-traffic restaurant operations system with a heavily optimized relational database layout, active billing ledger, and secure transaction handling scripts.",
+      tags: ["PHP", "MySQL", "JavaScript", "HTML5"],
+      category: "University Project",
+      image: "/projects/ss.webp",
+      github: "https://github.com/SaddadSium/Restaurant-Management-System",
+      live: "https://restaurentmanagementsystem.free.nf/Restaurant-Management-System/?i=1",
     },
-  ];
-
-  // ল্যাঙ্গুয়েজ ফ্লুয়েন্সি ডেটা (Bangla, English, Urdu, Hindi)
-  const languageFluency = [
-    { code: "BN // 01", lang: "Bangla", fluency: "Native / Mother Tongue" },
-    { code: "EN // 02", lang: "English", fluency: "Professional Working" },
-    { code: "UR // 03", lang: "Urdu", fluency: "Conversational Fluent" },
-    { code: "HI // 04", lang: "Hindi", fluency: "Spoken Understanding" },
   ];
 
   return (
     <div className="bg-abyss-brand text-gray-100 min-h-screen font-sans relative flex flex-col justify-center overflow-hidden">
-      {/* BACKGROUND TECH ENGINE */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#4e737608_1px,transparent_1px),linear-gradient(to_bottom,#4e737608_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] bg-[radial-gradient(circle_at_top,#4e737615,transparent_50%)] pointer-events-none"></div>
-
-      {/* ================= HERO SECTION ================= */}
       <section
         id="home"
         className="relative max-w-7xl mx-auto px-6 sm:px-8 pt-32 pb-16 min-h-[75vh] flex flex-col justify-center z-10"
       >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Left Column */}
           <div className="lg:col-span-7 space-y-8 text-left">
             <div className="inline-flex items-center gap-2.5 bg-ocean-brand/30 border border-slate-brand/30 px-4 py-2 rounded-xl text-teal-brand text-xs font-mono shadow-xl shadow-black/30 backdrop-blur-md">
               <span className="w-2 h-2 rounded-full bg-teal-brand animate-ping"></span>
@@ -314,8 +129,7 @@ export default function Home() {
             </div>
 
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tighter text-white leading-[1.05]">
-              Architecting High <br />
-              Performance <br />
+              Architecting High <br /> Performance <br />
               <span className="bg-gradient-to-r from-teal-brand via-slate-brand to-white bg-clip-text text-transparent">
                 Digital Systems.
               </span>
@@ -329,7 +143,7 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <Link
-                href="/project"
+                href="/projects"
                 className="bg-gradient-to-r from-slate-brand to-teal-brand text-abyss-brand px-8 py-4 rounded-xl font-bold text-sm tracking-wide shadow-lg shadow-teal-brand/10 hover:shadow-teal-brand/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2 group"
               >
                 Inspect Frameworks
@@ -338,9 +152,8 @@ export default function Home() {
                   className="group-hover:translate-x-1 transition-transform"
                 />
               </Link>
-
               <Link
-                href="/contact"
+                href="https://drive.google.com/drive/u/0/folders/1G2qd3EqpcCFV-K6oCTUF5V1cTGP8hq7I"
                 className="bg-ocean-brand/40 border border-slate-brand/20 text-lightning px-8 py-4 rounded-xl font-semibold text-sm hover:bg-ocean-brand/70 hover:border-teal-brand/30 active:scale-[0.98] transition-all flex items-center justify-center"
               >
                 Compile Resume (.pdf)
@@ -348,7 +161,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right Column: Terminal Window */}
           <div className="lg:col-span-5 relative group">
             <div className="absolute inset-0 bg-teal-brand/5 rounded-2xl blur-3xl pointer-events-none group-hover:bg-teal-brand/10 transition-all duration-500"></div>
             <div className="bg-[#050b11] border border-slate-brand/30 rounded-2xl shadow-2xl overflow-hidden font-mono text-xs text-lightning/70 backdrop-blur-md">
@@ -388,7 +200,7 @@ export default function Home() {
                     ✓ Secure Backend REST API Handshake Established
                   </p>
                   <p className="text-green-400">
-                    ✓ Enterprise Excel Logic Engine Mounted
+                    ✓ Systems Automation Architecture Loaded
                   </p>
                 </div>
                 <div className="bg-ocean-brand/30 border border-slate-brand/10 p-3 rounded-xl mt-4 space-y-1">
@@ -410,21 +222,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= HIGH-TECH CORE COMPETENCIES MATRIX (3 UNIQUE BOXES) ================= */}
       <section className="relative max-w-7xl mx-auto px-6 sm:px-8 pb-24 z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-slate-brand/20 rounded-2xl overflow-hidden bg-gradient-to-b from-ocean-brand/20 to-transparent backdrop-blur-md shadow-2xl">
           {stats.map((stat, idx) => (
             <div
               key={stat.id}
-              className={`p-8 flex flex-col justify-between h-44 group relative transition-all duration-300 hover:bg-white/[0.01] ${
-                idx !== 2
-                  ? "border-b md:border-b-0 md:border-r border-slate-brand/20"
-                  : ""
-              }`}
+              className={`p-8 flex flex-col justify-between h-44 group relative transition-all duration-300 hover:bg-white/[0.01] ${idx !== 2 ? "border-b md:border-b-0 md:border-r border-slate-brand/20" : ""}`}
             >
               <div className="flex justify-between items-start">
                 <span className="text-xs font-mono text-slate-brand/60 font-bold">
-                  0{idx + 1} // MATRIX
+                  0{idx + 1}
                 </span>
                 <div className="p-2.5 bg-slate-brand/10 text-teal-brand border border-slate-brand/20 rounded-xl group-hover:bg-teal-brand group-hover:text-abyss-brand group-hover:border-transparent transition-all duration-300">
                   {stat.icon}
@@ -444,13 +251,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= HIGH-TECH SKILLS GRID ================= */}
       <section
         id="services"
         className="py-32 bg-[#050b11]/80 border-t border-slate-brand/10 relative px-6 sm:px-8 z-10"
       >
         <div className="absolute top-0 left-1/4 w-[300px] h-[300px] bg-teal-brand/5 rounded-full blur-[120px] pointer-events-none"></div>
-
         <div className="max-w-7xl mx-auto space-y-20">
           <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-slate-brand/10 pb-8 gap-4">
             <div className="space-y-2 text-left">
@@ -463,7 +268,7 @@ export default function Home() {
             </div>
             <p className="text-lightning/50 max-w-sm text-sm font-normal leading-relaxed text-left md:text-right">
               A comprehensive directory of my scalable development stacks,
-              business analytics systems, and communication endpoints.
+              production systems, and communication endpoints.
             </p>
           </div>
 
@@ -475,9 +280,6 @@ export default function Home() {
                   <Binary size={16} className="text-teal-brand" /> Core
                   Frameworks & Engineering
                 </h3>
-                <span className="text-[10px] font-mono text-lightning/30">
-                  RUNTIME: v1.2.6
-                </span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {codingSkills.map((skill) => (
@@ -503,15 +305,14 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Box 2 & 3 Column */}
             <div className="lg:col-span-4 flex flex-col gap-8">
               <div className="bg-ocean-brand/10 border border-slate-brand/10 rounded-2xl p-6 space-y-5 flex-grow group">
                 <h3 className="text-sm font-bold tracking-widest text-white uppercase font-mono flex items-center gap-2 pb-3 border-b border-slate-brand/10">
-                  <FileSpreadsheet size={16} className="text-teal-brand" />{" "}
-                  Enterprise Automation
+                  <Terminal size={16} className="text-teal-brand" /> Media &
+                  Data Systems
                 </h3>
                 <div className="space-y-3">
-                  {enterpriseTools.map((tool, i) => (
+                  {creativeAndDataTools.map((tool, i) => (
                     <div
                       key={i}
                       className="flex items-center gap-3.5 bg-ocean-brand/20 border border-slate-brand/20 p-3.5 rounded-xl hover:bg-ocean-brand/40 transition-all duration-300"
@@ -532,7 +333,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* 4 Multi-Language Stack Panel (Bangla, English, Urdu, Hindi) */}
               <div className="bg-ocean-brand/10 border border-slate-brand/10 rounded-2xl p-6 space-y-4 group">
                 <h3 className="text-sm font-bold tracking-widest text-white uppercase font-mono flex items-center gap-2 pb-3 border-b border-slate-brand/10">
                   <Globe2 size={16} className="text-teal-brand" /> Team
@@ -562,7 +362,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= FEATURED PROJECTS SECTION (ইনলাইন প্রিমিয়াম SVG ইমেজের সাথে) ================= */}
       <section
         id="featured-projects"
         className="py-32 max-w-7xl mx-auto px-6 sm:px-8 relative z-10 border-t border-slate-brand/10"
@@ -581,62 +380,94 @@ export default function Home() {
             {featuredProjects.map((project, i) => (
               <div
                 key={i}
-                className="bg-ocean-brand/10 border border-slate-brand/15 rounded-2xl overflow-hidden hover:border-teal-brand/30 hover:bg-[#050b11]/50 transition-all duration-300 group flex flex-col justify-between shadow-xl"
+                className="bg-ocean-brand/10 border border-slate-brand/15 rounded-2xl overflow-hidden hover:border-teal-brand/30 hover:bg-[#050b11]/50 transition-all duration-300 group flex flex-col justify-between shadow-xl relative animate-fadeIn"
               >
                 <div className="space-y-5">
-                  {/* ইনলাইন রেডি-মেড রেন্ডারড SVG ব্যানার ইমেজ (যা কখনো ক্র্যাশ করবে না) */}
-                  <div className="h-48 w-full relative overflow-hidden border-b border-slate-brand/10 group-hover:scale-[1.01] transition-transform duration-500">
-                    {project.svgIcon}
-                    <div className="absolute inset-0 bg-gradient-to-t from-abyss-brand via-transparent to-transparent opacity-70"></div>
+                  <div className="h-44 w-full relative overflow-hidden border-b border-slate-brand/10 bg-[#060e16] flex items-center justify-center group-hover:scale-[1.01] transition-transform duration-500">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover opacity-60 group-hover:opacity-90 transition-all duration-500"
+                      onError={(e) => {
+                        e.currentTarget.style.display = "none";
+                        if (e.currentTarget.nextSibling) {
+                          (
+                            e.currentTarget.nextSibling as HTMLElement
+                          ).style.display = "flex";
+                        }
+                      }}
+                    />
+                    <div className="absolute inset-0 hidden flex-col items-center justify-center space-y-2 bg-[#060e16] px-4 font-mono text-center">
+                      <div className="absolute inset-0 bg-[linear-gradient(to_right,#4e737603_1px,transparent_1px),linear-gradient(to_bottom,#4e737603_1px,transparent_1px)] bg-[size:16px_16px]"></div>
+                      <ImageIcon
+                        size={20}
+                        className="text-slate-brand/40 animate-pulse relative z-10"
+                      />
+                      <span className="text-[9px] uppercase tracking-widest text-lightning/20 relative z-10">
+                        IMG_REF // STATIC_NODE_SHIELD
+                      </span>
+                    </div>
+
+                    <span className="absolute top-4 left-4 text-[9px] uppercase tracking-widest font-bold px-2.5 py-1 rounded border backdrop-blur-sm shadow-md flex items-center gap-1.5 z-20 bg-teal-brand/10 text-teal-brand border-teal-brand/20">
+                      <ShoppingBag size={14} className="text-teal-brand" />
+                      {project.category}
+                    </span>
+                    <div className="absolute inset-0 bg-gradient-to-t from-abyss-brand via-transparent to-transparent opacity-90 z-10"></div>
                   </div>
 
-                  {/* কার্ড টেক্সট বিবরণী */}
-                  <div className="px-6 space-y-4">
-                    <div className="flex justify-between items-start">
-                      <div className="p-2 bg-slate-brand/10 border border-slate-brand/20 text-teal-brand rounded-xl">
-                        <Code2 size={16} />
-                      </div>
-                      <a
-                        href={project.github}
-                        aria-label="GitHub Source"
-                        className="text-lightning/40 hover:text-teal-brand transition-colors"
-                      >
-                        <svg
-                          className="w-[18px] h-[18px] fill-current"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-1.99 1.03-2.69-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
-                        </svg>
-                      </a>
-                    </div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-teal-brand transition-colors tracking-tight">
+                  <div className="px-6 space-y-3.5">
+                    <h2 className="text-lg font-bold text-white group-hover:text-teal-brand transition-colors tracking-tight text-left line-clamp-1">
                       {project.title}
-                    </h3>
-                    <p className="text-lightning/50 text-sm leading-relaxed min-h-[64px]">
+                    </h2>
+                    <p className="text-lightning/50 text-xs sm:text-sm leading-relaxed text-left min-h-[72px] line-clamp-3">
                       {project.desc}
                     </p>
                   </div>
                 </div>
 
-                {/* টেক ট্যাগসমূহ */}
-                <div className="px-6 pb-6 flex flex-wrap gap-2 pt-4">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-[10px] font-mono bg-abyss-brand text-lightning/70 px-2.5 py-1 rounded-md border border-slate-brand/10"
+                <div className="px-6 pb-6 space-y-5 pt-4">
+                  <div className="flex flex-wrap gap-1.5 h-[52px] overflow-hidden content-start">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-[9px] font-mono bg-abyss-brand text-lightning/60 px-2 py-0.5 rounded border border-slate-brand/10"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-3 pt-2 border-t border-slate-brand/5">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      className="py-2.5 px-3 bg-ocean-brand/30 border border-slate-brand/15 rounded-xl text-xs font-semibold text-lightning/80 hover:text-white hover:border-slate-brand/40 transition-colors flex items-center justify-center gap-1.5 font-mono"
                     >
-                      {tag}
-                    </span>
-                  ))}
+                      <svg
+                        className="w-3.5 h-3.5 fill-current"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-1.99 1.03-2.69-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
+                      </svg>
+                      Source Code
+                    </a>
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      className="py-2.5 px-3 bg-teal-brand/5 border border-teal-brand/15 rounded-xl text-xs font-bold text-teal-brand hover:bg-teal-brand hover:text-abyss-brand hover:border-transparent transition-all flex items-center justify-center gap-1.5 font-mono shadow-sm"
+                    >
+                      <ExternalLink size={12} />
+                      Live Demo
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* ================= SEE MORE PROJECTS BUTTON ================= */}
           <div className="flex justify-center pt-6">
             <Link
-              href="/project"
+              href="/projects"
               className="inline-flex items-center gap-2 bg-ocean-brand/40 border border-slate-brand/20 hover:border-teal-brand/40 text-lightning hover:text-white px-8 py-4 rounded-xl font-semibold text-base transition-all duration-300 group shadow-xl active:scale-95"
             >
               See All Projects
