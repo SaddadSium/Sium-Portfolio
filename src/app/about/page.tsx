@@ -126,7 +126,7 @@ export default function AboutPage() {
                 My Projects
               </Link>
               <a
-                href="YOUR_DRIVE_LINK_HERE" //Drive live update link
+                href="/resume.pdf"
                 download
                 target="_blank"
                 className="bg-ocean-brand/40 border border-slate-brand/20 text-white px-8 py-3.5 rounded-xl font-bold text-sm hover:bg-ocean-brand/60 transition-all flex items-center gap-2 active:scale-95"

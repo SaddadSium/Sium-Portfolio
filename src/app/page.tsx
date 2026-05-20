@@ -278,7 +278,6 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-            {/* Box 1: Core Frameworks */}
             <div className="lg:col-span-8 bg-ocean-brand/10 border border-slate-brand/10 rounded-2xl p-6 sm:p-8 space-y-6 shadow-xl relative group">
               <div className="flex items-center justify-between pb-4 border-b border-slate-brand/10">
                 <h3 className="text-sm font-bold tracking-widest text-white uppercase font-mono flex items-center gap-2">
